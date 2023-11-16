@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "basic-aircraft-performance-calculator-csharp/1.0.0": {
+        "runtime": {
+          "basic-aircraft-performance-calculator-csharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "basic-aircraft-performance-calculator-csharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

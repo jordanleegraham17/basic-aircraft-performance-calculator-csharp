@@ -172,7 +172,7 @@ namespace _06_BasicFunctions
                         else
                         {
                             //ask for only the pilots weight
-                            Console.WriteLine("Please enter the pilot weight only : ");
+                            Console.WriteLine("Please enter the pilot weight in Kilograms (KG) : ");
                             pilotWeight = int.Parse(Console.ReadLine());
                             Console.WriteLine($"Pilot Weight = {pilotWeight}KG");
 
