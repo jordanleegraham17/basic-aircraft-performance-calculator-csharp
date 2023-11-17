@@ -121,7 +121,7 @@ namespace _06_BasicFunctions
                             //final output of passenger weight for C172 aircraft and directing to next method
                             totalPassengerWeight = totalPassengerWeight + pilotWeight;
                             Console.WriteLine($"\nThe total weight of passengers onboard is: {totalPassengerWeight}KG"); //giving total passenger weight
-                            LuggageWeightCalculation();
+                            LuggageWeightCalculation(totalPassengerWeight);
 
                         }//end if
                         else
@@ -167,7 +167,7 @@ namespace _06_BasicFunctions
                             Console.WriteLine($"The total passenger weight is: {totalPassengerWeight}KG");
 
                             //go to luggage weight calculation
-                            LuggageWeightCalculation();
+                            LuggageWeightCalculation(totalPassengerWeight);
                         }//end if
                         else
                         {
@@ -181,7 +181,7 @@ namespace _06_BasicFunctions
                             Console.WriteLine($"The total passenger weight is: {totalPassengerWeight}KG");
                             
                             //go to luggage weight calculation
-                            LuggageWeightCalculation();
+                            LuggageWeightCalculation(totalPassengerWeight);
                         }//end else
                     }//end if
                     else
@@ -193,8 +193,9 @@ namespace _06_BasicFunctions
             }//end else
         }//end PassengerWeightCalculation method
 
-        private static void LuggageWeightCalculation()
+        private static void LuggageWeightCalculation(int totalPassengerWeight)
         {
+            Console.WriteLine($"\nTotal passenger weight: {totalPassengerWeight}KG\tNow calculating luggage weight...");
             Console.WriteLine("\nNow calculating  luggage weight");
             Console.ReadKey();//keeping the command line alive
         }//end LuggageWeightCalculation method
