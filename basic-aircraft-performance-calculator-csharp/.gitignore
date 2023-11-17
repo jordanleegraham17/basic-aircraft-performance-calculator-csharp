@@ -5,6 +5,13 @@
 *.suo
 *.user
 *.sln.docstates
+*.vidsx
+*.wsuo
+*.slnx.sqlite
+VSWorkspaceState.json
+
+# Visual Studio Code directories
+.vscode/
 
 # JetBrains Rider
 .idea/
