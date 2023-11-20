@@ -195,8 +195,26 @@ namespace _06_BasicFunctions
 
         private static void LuggageWeightCalculation(int totalPassengerWeight)
         {
-            Console.WriteLine($"\nTotal passenger weight: {totalPassengerWeight}KG\tNow calculating luggage weight...");
-            Console.WriteLine("\nNow calculating  luggage weight");
+            //variables
+            bool validInput = true;
+            //int luggageWeight;
+
+            //prompt user for the weight of luggage onboard and validate this input
+            while (validInput == true)
+            {
+                Console.WriteLine($"\nTotal passenger weight: {totalPassengerWeight}KG\tNow calculating luggage weight...");
+
+                if (int.TryParse(Console.ReadLine(), out int luggageWeight))
+                {
+                    Console.WriteLine($"Luggage weight entered: {luggageWeight}KG");
+                }
+                else
+                {
+                    //prompt user to enter a valid input
+                    Console.WriteLine("\n\tPlease enter a valid integer value");
+                }
+            }//end while
+            
             Console.ReadKey();//keeping the command line alive
         }//end LuggageWeightCalculation method
 
