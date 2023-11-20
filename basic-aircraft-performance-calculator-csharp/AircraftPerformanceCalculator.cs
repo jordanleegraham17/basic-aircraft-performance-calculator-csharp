@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Implementing these different tools as much as possible through different logical functions to complete the task.
  * Plan:
  * The plan for this project is to initially take in various inputs from the user and read the information back,
- * such as a selection of aircraft type, weight (passengers + baggage + fuel), fuel on board etc.
+ * such as a selection of aircraft type, weight (passengers + baggage + fuel), on board etc.
 */
 
 namespace _06_BasicFunctions
@@ -203,6 +203,7 @@ namespace _06_BasicFunctions
             while (validInput == true)
             {
                 Console.WriteLine($"\nTotal passenger weight: {totalPassengerWeight}KG\tNow calculating luggage weight...");
+                Console.WriteLine($"Please enter the weight of all luggage on board in Kilograms (KG):");
 
                 if (int.TryParse(Console.ReadLine(), out int luggageWeight))
                 {
