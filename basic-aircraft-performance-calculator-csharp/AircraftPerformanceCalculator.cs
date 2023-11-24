@@ -35,6 +35,7 @@ namespace _06_BasicFunctions
         }//end main
 
         //_____ OTHER METHODS ______
+
         static void AircraftSelection()
         {
             //variables
@@ -193,7 +194,7 @@ namespace _06_BasicFunctions
             }//end else
         }//end PassengerWeightCalculation method
 
-        private static void LuggageWeightCalculation(int totalPassengerWeight)
+        static void LuggageWeightCalculation(int totalPassengerWeight)
         {
             //variables
             bool validInput = true;
@@ -208,16 +209,42 @@ namespace _06_BasicFunctions
                 if (int.TryParse(Console.ReadLine(), out int luggageWeight))
                 {
                     Console.WriteLine($"Luggage weight entered: {luggageWeight}KG");
-                }
+                    fuelWeightCalculation(totalPassengerWeight, luggageWeight);
+                }//end if
                 else
                 {
                     //prompt user to enter a valid input
                     Console.WriteLine("\n\tPlease enter a valid integer value");
-                }
+                }//end else
             }//end while
-            
-            Console.ReadKey();//keeping the command line alive
         }//end LuggageWeightCalculation method
+
+        //method for calculating the fuel weight
+        static void fuelWeightCalculation(int totalPassengerWeight, int luggageWeight)
+        {
+            //local variables
+            string userChoice;
+
+            //update user
+            int beforeFuelTotalWeight = totalPassengerWeight + luggageWeight;
+            Console.WriteLine($"The current total weight, before fuel is: {beforeFuelTotalWeight}KG");
+
+            //prompt user for input
+            Console.WriteLine("\nFuel Weight Calculations...");
+            Console.WriteLine("Have you completed appropriate fuel checks in your pre-flight walkaround? (YES / NO)");
+            userChoice = Console.ReadLine();
+
+            //validate user response
+            if (userChoice == "YES" | userChoice == "Y" | userChoice == "yes" | userChoice == "y")
+            {
+                Console.WriteLine("You have completed the preflight fuel checks. Please enter the fuel qty in Litres (L) within tank 1: ");
+            }//end if
+            else
+            {
+                Console.WriteLine("Please complete your preflight fuel checks before proceeding.");
+            }//end else
+            Console.ReadKey();//keeping console alive for now
+        }//end fuel weight calculation
 
     }//end class
 }//end namespace
